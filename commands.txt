@@ -1,0 +1,6 @@
+INSTALL FASTAPI:  pip install fastapi
+
+INSTALL FASTAPI ALL: pip install fastapi[all]
+
+RUN LIVE SERVER: fastapi dev main.py
+
