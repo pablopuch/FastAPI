@@ -2,8 +2,6 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from datetime import datetime, timedelta, timezone
-
-
 import jwt
 from passlib.context import CryptContext
 from jwt.exceptions import InvalidTokenError
@@ -16,11 +14,8 @@ SECRET_KEY = "kmbftgdvnkJhgbnjkhGghH85564564456dfgv45fgvhKNBJbtbftfybugbuy8546"
 
 
 
-
 router = APIRouter()
-
 oauth2 = OAuth2PasswordBearer(tokenUrl="login")
-
 crypt = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 

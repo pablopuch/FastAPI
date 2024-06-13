@@ -28,7 +28,6 @@ async def user(id: str):
 
 
 
-
 @router.post("/", response_model=User, status_code=status.HTTP_201_CREATED)
 async def new_user(user: User):
     if type(search_user("email", user.email)) == User:
@@ -45,10 +44,6 @@ async def new_user(user: User):
     
     
 
-
-
-
-
 @router.put("/",response_model=User)
 async def update_user(user: User):
     
@@ -63,12 +58,7 @@ async def update_user(user: User):
     return search_user("_id", ObjectId(user.id))
     
  
- 
- 
- 
- 
- 
- 
+
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
 async def update_user(id: str):
     
@@ -76,16 +66,6 @@ async def update_user(id: str):
                 
     if not found:
         return {"error": "No se ha eliminado el usuario"}    
-
-
-
-
-
-
-
-
-
-
 
 
 
